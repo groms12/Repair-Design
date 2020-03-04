@@ -5,10 +5,10 @@ const cssmin =  require('gulp-cssmin');
 const sass = require('gulp-sass');
  
 function defalt() {
-    return gulp.src('./*.css')
+    return src('./*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist'));
+        .pipe(dest('dist'));
 };
 
 function bs() {
@@ -24,7 +24,7 @@ function bs() {
 };
 
 function serveSass() {
-    return src("./sass/*.scss")
+    return src("./sass/*.sass")
         .pipe(sass())
         .pipe(dest("./css"))
         .pipe(browserSync.stream());
