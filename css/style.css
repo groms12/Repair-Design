@@ -328,6 +328,11 @@ template {
   display: none; }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: black;
   padding: 24px 0; }
 
@@ -354,6 +359,7 @@ template {
 
 .hero {
   position: relative;
+  padding-top: 100px;
   background: black url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
