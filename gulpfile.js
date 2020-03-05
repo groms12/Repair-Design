@@ -4,12 +4,12 @@ const rename =  require('gulp-rename');
 const cssmin =  require('gulp-cssmin');
 const sass = require('gulp-sass');
  
-function defalt() {
-    return src('./*.css')
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(dest('dist'));
-};
+// function defalt() {
+//     return src('./css/*.css')
+//         .pipe(cssmin())
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(dest('dist'));
+// };
 
 function bs() {
     serveSass();
