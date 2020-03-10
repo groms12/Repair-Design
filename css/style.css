@@ -17,7 +17,7 @@
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.94rem; }
+  font-size: 0.93rem; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -355,7 +355,7 @@ template {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-size: 1.75rem; }
+  font-size: 1.075rem; }
 
 .nav__item {
   text-decoration: none;
