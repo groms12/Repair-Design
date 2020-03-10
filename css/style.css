@@ -487,6 +487,14 @@ template {
   margin-top: 0;
   margin-bottom: 0.7rem; }
 
+.card__subtitle {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.43rem;
+  line-height: 1.93rem;
+  text-transform: none;
+  color: #363636;
+  margin: 0 13rem; }
+
 .card__list {
   padding: 0;
   margin: 0;
