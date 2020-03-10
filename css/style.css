@@ -491,7 +491,7 @@ body {
       background-color: #E3B873;
       margin: 0 10px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .nav__item {
     margin-right: 1rem; }
   html {
