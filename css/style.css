@@ -561,7 +561,9 @@ img {
   .nav__item {
     margin-right: 1rem; }
   html {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .card__pricetag {
+    padding: 1rem 2rem 1rem 1rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
