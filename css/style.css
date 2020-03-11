@@ -419,6 +419,7 @@ template {
     min-width: 17.6rem;
     min-height: 6.92rem;
     background-color: black;
+    font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     color: #fff;
     text-decoration: none; }
@@ -462,7 +463,8 @@ template {
     color: #E3B873; }
 
 .types__section-title {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  font-size: 0.8rem; }
 
 .row {
   display: flex;
@@ -475,7 +477,7 @@ template {
 .card__text {
   position: relative;
   max-width: 23.6rem;
-  margin: 0 auto;
+  margin: 0 2rem;
   margin-top: -9.3rem;
   padding: 1.79rem 2.14rem;
   background-color: #ffffff;
@@ -483,37 +485,40 @@ template {
 
 .card__title {
   font-family: 'Yeseva One', cursive;
-  font-size: 1.29rem;
+  font-size: 1.1rem;
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 0.6rem; }
 
 .card__subtitle {
   font-family: 'Futura Book', sans-serif;
-  font-size: 1.43rem;
-  line-height: 1.93rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   text-transform: none;
   color: #363636;
-  margin: 0 13rem; }
+  max-width: 53rem;
+  text-align: center;
+  margin: 1.2rem auto; }
 
 .card__list {
   padding: 0;
   margin: 0;
   padding-left: 1rem;
-  font-size: 1.07rem;
-  line-height: 1.79rem;
+  font-size: 0.85rem;
+  line-height: 1.6rem;
   color: #959595;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.9rem; }
 
 .card__pricetag {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
-  font-size: 1.29rem;
+  font-size: 1rem;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 2.6rem; }
+  padding: 1.2rem 6rem 1.2rem 2rem;
+  font-weight: 400; }
 
 .container {
   width: 85%;
@@ -550,11 +555,11 @@ img {
         background-color: #E3B873;
         margin: 0 10px; }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .nav__item {
     margin-right: 1rem; }
   html {
-    font-size: 12px; } }
+    font-size: 1rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -570,8 +575,14 @@ img {
     align-items: center; }
   .types__card {
     margin-bottom: 5rem; }
+  .types__design {
+    background-color: black; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .card__item-end ~ li {
+    display: none; }
+  .card__item-end::after {
+    content: '...'; } }
 
 @media screen and (max-width: 570px) {
   .contacts__button {
