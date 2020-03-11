@@ -512,13 +512,15 @@ template {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.2rem 6rem 1.2rem 2rem;
-  font-weight: 400; }
+  padding: 1.2rem 2.9rem 1.2rem 2.5rem;
+  font-weight: 100; }
+  .card__pricetag-1 {
+    padding: 1.2rem 5rem 1.2rem 2rem; }
 
 .container {
   width: 85%;
