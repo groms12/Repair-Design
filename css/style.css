@@ -568,6 +568,8 @@ template {
   margin: auto; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   top: 0;
@@ -580,10 +582,13 @@ template {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: black url("../img/bg-lines.svg") no-repeat center;
+    background: black url("../img/Group.svg") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
