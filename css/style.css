@@ -649,7 +649,7 @@ img {
         background-color: #E3B873;
         margin: 0 10px; }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1250px) {
   .nav__item {
     margin-right: 1rem; }
   html {
@@ -672,9 +672,12 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .types__design {
-    background-color: black; }
+    background-color: black;
+    color: #fff; }
   .card__text {
     margin-left: 0; }
+  .card__subtitle {
+    color: #fff; }
   .card__item-end ~ li {
     display: none; }
   .card__item-end::after {
