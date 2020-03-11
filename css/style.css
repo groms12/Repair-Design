@@ -410,7 +410,7 @@ template {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 3.2rem; }
 
 .hero {
   position: relative;
@@ -618,7 +618,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-style: 14px; }
+  font-size: 14px; }
 
 body {
   font-family: 'Futura Book', sans-serif;
@@ -644,11 +644,11 @@ img {
         background-color: #E3B873;
         margin: 0 10px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1230px) {
   .nav__item {
     margin-right: 1rem; }
   html {
-    font-size: 1rem; }
+    font-size: 12px; }
   .card__pricetag {
     padding: 1rem 2rem 1rem 1rem; } }
 
