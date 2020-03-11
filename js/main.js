@@ -11,4 +11,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     closeBtn.addEventListener('click', toggleModal)
+
+    document.addEventListener('keydown', (e) => {
+        if (e.keyCode === 27) {
+            modal.classList.toggle('modal--visible');
+        } 
+    });
 });
