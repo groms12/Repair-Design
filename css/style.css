@@ -675,7 +675,8 @@ img {
     background-color: black;
     color: #fff; }
   .card__text {
-    margin-left: 0; }
+    margin-left: 0;
+    color: black; }
   .card__subtitle {
     color: #fff; }
   .card__item-end ~ li {
@@ -683,7 +684,7 @@ img {
   .card__item-end::after {
     content: '...'; }
   .card__pricetag {
-    padding: 1rem 2rem 1rem 1rem; } }
+    padding: 1rem 4rem 1rem 3rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__button {
