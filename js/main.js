@@ -36,4 +36,10 @@ $(document).ready(function () {
             modal.toggleClass('modal--visible');
         } 
     });
+
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal')) {
+            modal.toggleClass('modal--visible');
+        }
+    });
 });
