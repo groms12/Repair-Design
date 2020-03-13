@@ -674,7 +674,7 @@ template {
   width: auto;
   bottom: -1px; }
 
-.scroll_top {
+.scroll-top {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -684,7 +684,9 @@ template {
   height: 32px;
   background: url("https://snipp.ru/img/scroll_top.png") 50% 50% no-repeat #E3B873;
   border-radius: 50%;
-  opacity: 1; }
+  opacity: 0.5; }
+  .scroll-top:hover {
+    opacity: 1; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
