@@ -686,7 +686,8 @@ template {
   border: 2px solid black;
   background-color: #E3B873;
   z-index: 1000;
-  outline: none; }
+  outline: none;
+  display: none; }
   .scroll-top::after {
     content: '';
     width: 0.714rem;
