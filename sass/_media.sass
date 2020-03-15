@@ -19,9 +19,17 @@
             margin-left: 0
 
 @media screen and ( max-width: 760px )
+    .section
+        &-title
+            &__word
+                display: block
+                &::after
+                    display: none
     .row
         flex-direction: column
         align-items: center
+    .col-50
+        width: 65%
     .types
         &__card
             margin-bottom: 5rem

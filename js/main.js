@@ -43,16 +43,17 @@ $(document).ready(function () {
         }
     });
 
-    $(document).scroll(function(){//функция прокрутки страницы наверх
-        if($(document).scrollTop() > 50) {
+    $(document).scroll(function(){  //функция прокрутки страницы наверх
+        if($(document).scrollTop() > 70) {
             $('.scroll-top').show();
         } else {
             $('.scroll-top').hide();
         }
     });
     
-    $('.scroll-top').click(function(){
-        $('html, body').animate({scrollTop: 0}, 'slow');
+    $('.scroll-top').click(function(event){
+        $('html').animate({scrollTop: 0}, 1000);
+        $('body').animate({scrollTop: 0}, 1000);
         return false;
     });
 

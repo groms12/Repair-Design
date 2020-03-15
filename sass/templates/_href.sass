@@ -1,14 +1,27 @@
-.scroll-top 
-	display: none
+.scroll-top
+	cursor: pointer
 	position: fixed
-	bottom: 30px
-	right: 30px
-	z-index: 1000
-	width: 32px
-	height: 32px
-	background: url('https://snipp.ru/img/scroll_top.png') 50% 50% no-repeat $primary
+	bottom: 3.57rem
+	right: 5.14rem
+	width: 3.57rem
+	height: 3.57rem
 	border-radius: 50%
-	opacity: 0.5
- 	// transition: background-color .3s, opacity .5s, visibility .5s
-	&:hover
-		opacity: 1
+	border: 2px solid $dark
+	background-color: $primary
+	z-index: 1000
+	outline: none
+	&::after
+		content: ''
+		width: 0.714rem
+		height: 0.714rem
+		border-top: 2px solid $dark
+		border-left: 2px solid $dark
+		transform: rotate(45deg)
+		position: absolute
+		top: 0.286rem
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+
+
