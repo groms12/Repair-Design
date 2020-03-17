@@ -51,9 +51,10 @@ $(document).ready(function () {
         }
     });
     
-    $('.scroll-top').click(function(event){
-        $('html').animate({scrollTop: 0}, 1000);
-        $('body').animate({scrollTop: 0}, 1000);
+    $('.scroll-top').click(function(){
+        // $('html').animate({scrollTop: "-=50px"}, 1000);
+        $('body').animate({scrollTop: "-=50px"}, 1000);
+        console.log($('body').scrollTop);
         return false;
     });
 
@@ -69,10 +70,17 @@ $(document).ready(function () {
           },
     });
     
-    var next = $('.swiper-button-next');
-    var prev = $('.swiper-button-prev');
-    var bullets = $('.swiper-pagination');
+    var next = $('.swiper-button-next__second');
+    var prev = $('.swiper-button-prev__second');
+    var bullets = $('.swiper-pagination__second');
 
     bullets.css('left', prev.width() + 15);
     next.css('left', prev.width() + bullets.width() + 20);
+
+    var next1 = $('.swiper-button-next__first');
+    var prev1 = $('.swiper-button-prev__first');
+    var bullets1 = $('.swiper-pagination__first');
+
+    bullets1.css('left', prev1.width() + 15);
+    next1.css('left', prev1.width() + bullets1.width() + 20);
 });
