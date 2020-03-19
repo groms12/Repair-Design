@@ -6,6 +6,7 @@
     <title>Document</title>        
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -36,24 +37,24 @@
             </div>
             <div class="container">
                 <div class="hero__content">                
-                    <h1 class="title hero__title">Tурецкий ремонт в&nbsp;<span class="title__primary">Ростове-на-дону</span></h1>
-                    <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-                    <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
-                    <button class="button hero__button button--outline" data-toggle="modal">Отправить заявку</button>                    
+                    <h1 class="title hero__title wow fadeInRight">Tурецкий ремонт в&nbsp;<span class="title__primary">Ростове-на-дону</span></h1>
+                    <p class="hero__text wow fadeInRight" data-wow-delay="0.2s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
+                    <button class="button hero__button button--primary wow fadeInRight" data-wow-delay="0.4s" data-toggle="modal">Рассчитать стоимость</button>
+                    <button class="button hero__button button--outline wow fadeInRight" data-wow-delay="0.6s" data-toggle="modal">Отправить заявку</button>                    
                 </div>
             </div>         
             <a href="#" class="hero__scroll-down">Листайте вниз</a>
         </section>
 
     <section class="section section--dark projects">
-        <div class="container">
+        <div class="container projects__container">
             <div class="row">
                 <div class="col-50">
                     <div class="section-title section-title--left">
-                        <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
-                        <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+                        <h2 class="section-title__heading section-title__heading--primary wow fadeIn">Завершенные <span class="section-title__word">проекты</span></h2>
+                        <p class="section-title__text wow fadeIn">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
                     </div>
-                    <div class="swiper-container">
+                    <div class="swiper-container wow fadeIn" data-wow-delay="0.6s">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper swiper-no-swiping">
                             <!-- Slides -->
@@ -82,7 +83,7 @@
                     </div>
                 </div>                
                 <div class="col-50">
-                    <div class="swiper-container">
+                    <div class="swiper-container wow fadeIn" data-wow-delay="0.8s">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper swiper-no-swiping">
                             <!-- Slides -->
@@ -98,26 +99,48 @@
 
         <section class="section control">
             <div class="container">
-                <div class="section-title">
-                    <h2 class="section-title__heading">Онлайн контроль</h2>
+                <div class="section-title control__section-title section-title--light">
+                    <h2 class="section-title__heading wow slideInUp">Онлайн контроль</h2>
                     <div class="section-title__image">
                         <img src="img/video.svg" alt="Ремонт">
                     </div>
                 </div>
+                <div class="control__video video">
+                    <img src="img/play.svg" alt="play icon" class="play video__play">
+                </div>
+                <div class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</div>
+                <form action="" class="form control__form">
+                    <div class="control__input-group">
+                        <label for="user-name" class="label form__label control__label label--dark">Имя</label>
+                        <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут">
+                    </div>
+    
+                    <div class="control__input-group">
+                        <label for="user-phone" class="label form__label control__label label--dark">Телефон</label>
+                        <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона">
+                    </div>
+   
+                    <button class="button button--primary control__button">Отправить</button>
+
+                    <div class="policy control__policy">
+                        <input type="checkbox" class="policy__checkbox" name="policy-checkbox" id="policy-checkbox" checked>
+                        <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+                    </div>
+                </form>
             </div>
         </section>
 
         <section class="section types">
             <div class="container">
                 <div class="section-title types__section-title">
-                    <h2 class="section-title__heading">Виды ремонта</h2>
+                    <h2 class="section-title__heading wow slideInUp">Виды ремонта</h2>
                     <div class="section-title__image">
                         <img src="img/repair.svg" alt="Камера">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.2s">
                             <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Косметический ремонт</h3>
@@ -149,7 +172,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.4s">
                             <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Капитальный ремонт</h3>
@@ -181,7 +204,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.6s">
                             <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -220,7 +243,7 @@
         <section class="section types__design">
             <div class="container">
                 <div class="section-title types__section-title">
-                    <h2 class="section-title__heading">Дизайн проект</h2>
+                    <h2 class="section-title__heading wow slideInUp">Дизайн проект</h2>
                     <div class="section-title__image">
                         <img src="img/design.svg" alt="Дизайн проект">
                     </div>
@@ -228,7 +251,7 @@
                 </div>
                 <div class="row">
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.2s">
                             <img src="img/design/design-1.png" alt="Косметический ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Минимальный</h3>
@@ -254,7 +277,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.4s">
                             <img src="img/design/design-2.png" alt="Капитальный ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Стандартный</h3>
@@ -286,7 +309,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-30">
-                        <div class="card types__card">
+                        <div class="card types__card wow zoomIn" data-wow-delay="0.6s">
                             <img src="img/design/design-3.jpg" alt="Дизайнерский ремонт" class="card__image">
                             <div class="card__text">
                                 <h3 class="card__title">Полный</h3>
@@ -336,7 +359,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-50">
-                        <div class="section-title section-title--left">
+                        <div class="section-title section-title--left wow fadeIn" data-wow-delay="0.2s">
                             <p class="section-title__subtitle">как мы работаем</p>
                             <h2 class="section-title__heading section-title__heading--primary">6 шагов<span class="section-title__word">до цели</span></h2>
                             <p class="section-title__part">1/6</p>
@@ -346,7 +369,8 @@
                                 </p>                      
                         </div>
                     </div>                
-                    <div class="col-50"> <div class="swiper-container">
+                    <div class="col-50"> 
+                        <div class="swiper-container wow fadeIn" data-wow-delay="0.6s">
                         <div class="swiper-wrapper swiper-no-swiping">
                             <!-- Slides -->
                             <div class="swiper-slide">
@@ -380,7 +404,7 @@
                         <div class="swiper-pagination swiper-pagination__second"></div>
                         <div class="swiper-button-next swiper-button-next__second"></div>
                         
-                        <div class="swiper-container">
+                        <div class="swiper-container wow fadeIn" data-wow-delay="0.8s">
                             <div class="swiper-wrapper swiper-no-swiping">
                                 <!-- Slides -->
                                 <div class="swiper-slide"><img src="img/slider/img01.jpg" alt=""></div>
@@ -403,13 +427,13 @@
             <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
             <form action="" class="form modal__form">
                 <label for="user-name" class="label form__label label--light">Имя</label>
-                <input type="text" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут">
+                <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут">
 
                 <label for="user-phone" class="label form__label label--light">Телефон</label>
-                <input type="tel" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона">
+                <input type="tel" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона">
 
                 <label for="user-email" class="label form__label label--light">Email</label>
-                <input type="email" class="input form__input modal__input" id="user-email" placeholder="Ваш email">
+                <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
 
                 <div class="policy modal__policy">
                     <input type="checkbox" class="policy__checkbox" name="policy-checkbox" id="policy-checkbox" checked>
@@ -428,6 +452,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

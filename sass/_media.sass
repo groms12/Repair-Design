@@ -25,6 +25,32 @@
                 display: block
                 &::after
                     display: none
+    .control 
+        background-color: $dark 
+        color: $light
+        &__form
+            flex-direction: column
+        &__input-group
+            &:first-child
+                margin-bottom: 2rem
+        &__label
+            &--dark
+                &::placeholder
+                    color: $light
+        &__button
+            order: 2
+            margin-bottom: -6rem
+            margin-top: 4rem
+        &__policy
+            order: 1
+            margin-top: 0.7rem
+            &-label
+                justify-content: flex-start
+        &__video
+            background-size: contain
+    .video
+        &__play
+            width: 20%
     .row
         flex-direction: column
         align-items: center

@@ -44,15 +44,15 @@
   color: #fff;
   padding: 0.5rem 0;
   outline: none; }
-  .input::-webkit-input-placeholder {
+  .input--light::-webkit-input-placeholder {
     color: #fff; }
-  .input::-moz-placeholder {
+  .input--light::-moz-placeholder {
     color: #fff; }
-  .input:-ms-input-placeholder {
+  .input--light:-ms-input-placeholder {
     color: #fff; }
-  .input::-ms-input-placeholder {
+  .input--light::-ms-input-placeholder {
     color: #fff; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
 
 .policy__checkbox {
@@ -582,6 +582,71 @@ template {
   width: 50%;
   margin-bottom: 1.43rem; }
 
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem; }
+
+.control__video {
+  max-width: 58.357rem;
+  position: relative;
+  display: flex;
+  margin: auto;
+  min-height: 31rem;
+  background: black url("../img/video-mask.jpg") center no-repeat;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4.428rem; }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  text-align: center;
+  max-width: 40.785rem;
+  margin: auto;
+  font-size: 1.428rem;
+  line-height: 2.41rem;
+  margin-bottom: 4.286em; }
+  .control__text::before {
+    margin: auto;
+    display: block;
+    content: '';
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px;
+    margin-bottom: 2.5rem; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto;
+  justify-content: space-between; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy-label {
+    justify-content: center; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__button {
+  padding: 1.286rem 4.7857rem; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -634,6 +699,9 @@ template {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
+
+.projects__container {
+  margin-bottom: 28rem; }
 
 .swiper-slide {
   display: flex;
@@ -741,6 +809,8 @@ img {
     color: #fff; }
   .section-title {
     text-align: center; }
+    .section-title--light {
+      color: #fff; }
     .section-title--left {
       text-align: left; }
     .section-title__heading {
@@ -799,6 +869,36 @@ img {
     display: block; }
     .section-title__word::after {
       display: none; }
+  .control {
+    background-color: black;
+    color: #fff; }
+    .control__form {
+      flex-direction: column; }
+    .control__input-group:first-child {
+      margin-bottom: 2rem; }
+    .control__label--dark::-webkit-input-placeholder {
+      color: #fff; }
+    .control__label--dark::-moz-placeholder {
+      color: #fff; }
+    .control__label--dark:-ms-input-placeholder {
+      color: #fff; }
+    .control__label--dark::-ms-input-placeholder {
+      color: #fff; }
+    .control__label--dark::placeholder {
+      color: #fff; }
+    .control__button {
+      order: 2;
+      margin-bottom: -6rem;
+      margin-top: 4rem; }
+    .control__policy {
+      order: 1;
+      margin-top: 0.7rem; }
+      .control__policy-label {
+        justify-content: flex-start; }
+    .control__video {
+      background-size: contain; }
+  .video__play {
+    width: 20%; }
   .row {
     flex-direction: column;
     align-items: center; }
