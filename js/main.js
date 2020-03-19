@@ -1,24 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function(event) { 
-//     const modal = document.querySelector('.modal');
-//     const modalBtn = document.querySelectorAll('[data-toggle="modal"]');
-//     const closeBtn = document.querySelector('.modal__close');
-//     const toggleModal = () => {
-//         modal.classList.toggle('modal--visible');
-//     };
-
-//     modalBtn.forEach(element => {
-//         element.addEventListener('click', toggleModal);
-//     });
-
-//     closeBtn.addEventListener('click', toggleModal)
-
-//     document.addEventListener('keydown', (e) => {
-//         if (e.keyCode === 27) {
-//             modal.classList.toggle('modal--visible');
-//         } 
-//     });
-// })
-
 $(document).ready(function () {
     var modal = $('.modal');
     var modalBtn = $('[data-toggle=modal]');
@@ -52,8 +31,8 @@ $(document).ready(function () {
     });
     
     $('.scroll-top').click(function(){
-        // $('html').animate({scrollTop: "-=50px"}, 1000);
-        $('body').animate({scrollTop: "-=50px"}, 1000);
+        $('html').animate({scrollTop: 0}, 1000);
+        $('body').animate({scrollTop: 0}, 1000);
         console.log($('body').scrollTop);
         return false;
     });
@@ -76,6 +55,7 @@ $(document).ready(function () {
 
     bullets.css('left', prev.width() + 15);
     next.css('left', prev.width() + bullets.width() + 20);
+    console.log(next);
 
     var next1 = $('.swiper-button-next__first');
     var prev1 = $('.swiper-button-prev__first');
