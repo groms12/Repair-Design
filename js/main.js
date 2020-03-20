@@ -65,4 +65,36 @@ $(document).ready(function () {
     next1.css('left', prev1.width() + bullets1.width() + 20);
 
     new WOW().init();
+
+    // валидация формы
+    $(".modal__form").validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15
+          },
+          userPhone: "required",
+          userEmail: {
+            required: true,
+            email: true
+          }
+        }, 
+        messages: {
+            userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче двух букв",
+                maxlength: "Имя не длиннее 15 букв"
+            },
+            userPhone: "Телефон обязателен",
+            userEmail: {
+              required: "Обязательно укажите email",
+              email: "Введите в формате name@domain.com"
+            }
+        }
+      });
+
+      $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });
