@@ -843,6 +843,11 @@ template {
   .footer__menu {
     background-color: black;
     padding: 4.2857rem; }
+  .footer__map {
+    max-width: 66.07rem;
+    margin: auto;
+    margin-bottom: 4rem;
+    min-height: 455px; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
