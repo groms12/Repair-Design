@@ -98,7 +98,19 @@ $(document).ready(function () {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
             }
-        }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                }
+            });
+          }
       });
 
       $(".footer__form").validate({
@@ -133,7 +145,18 @@ $(document).ready(function () {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
             }
-        }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    $(form)[0].reset();
+                }
+            });
+          }
       });
 
       $(".control__form").validate({
@@ -168,7 +191,18 @@ $(document).ready(function () {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
             }
-        }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    $(form)[0].reset();
+                }
+            });
+          }
       });
 
       $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});

@@ -20,7 +20,8 @@ try {
     $mail->Username   = 'groms470@gmail.com';                     // SMTP username
     $mail->Password   = 'Fybhfv1204';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->Port       = 465;   
+    $mail->CharSet = "UTF-8";                                 // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom('groms470@gmail.com', 'Марина');
@@ -31,10 +32,14 @@ try {
     $mail->Subject = 'Новая заявка сайта';
     $mail->Body    = "Пользователь оставил данные $(userName)";
 
-    $mail->send();
-    header('Location: thanks.html');
-} catch (Exception $e) {
-    echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
-}
+    if ($mail->send())  {
+        echo "ok";
+    }  
+    else {
+        echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
+    }
 
+} catch (Exception $e) {
+    echo "Ошибка: {$mail->ErrorInfo}";
+}
 ?>
