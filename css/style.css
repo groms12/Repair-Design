@@ -845,7 +845,7 @@ template {
     padding: 1.285rem 4.7857rem; }
   .footer__menu {
     background-color: black;
-    padding: 4.2857rem; }
+    padding-top: 4.2857rem; }
   .footer__map {
     max-width: 66.07rem;
     margin: auto;
