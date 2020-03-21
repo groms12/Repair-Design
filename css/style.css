@@ -641,6 +641,9 @@ template {
 .control__input {
   color: black; }
 
+.control__label {
+  margin-bottom: 1rem; }
+
 .control__policy {
   flex-basis: 100%;
   margin-top: 1.2rem; }

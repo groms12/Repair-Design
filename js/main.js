@@ -54,7 +54,7 @@ $(document).ready(function () {
     var bullets = $('.swiper-pagination__second');
 
     bullets.css('left', prev.width() + 15);
-    next.css('left', prev.width() + bullets.width() + 20);
+    next.css('left', prev.width() + bullets.width() + 20); 
 
     var next1 = $('.swiper-button-next__first');
     var prev1 = $('.swiper-button-prev__first');
@@ -82,6 +82,9 @@ $(document).ready(function () {
           userEmail: {
             required: true,
             email: true
+          },
+          policyCheckbox: {
+            required: true,
           }
         }, 
         messages: {
@@ -97,6 +100,9 @@ $(document).ready(function () {
             userEmail: {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
+            },
+            policyCheckbox: {
+                required: "Обязательно согласие",
             }
         },
         submitHandler: function(form) {
@@ -105,8 +111,8 @@ $(document).ready(function () {
                 url: "send.php",
                 data: $(form).serialize(),
                 success: function (response) {
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                     $(form)[0].reset();
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                     modal.removeClass('modal--visible');
                 }
             });
@@ -129,6 +135,9 @@ $(document).ready(function () {
           userEmail: {
             required: true,
             email: true
+          },
+          policyCheckbox: {
+            required: true,
           }
         }, 
         messages: {
@@ -144,6 +153,9 @@ $(document).ready(function () {
             userEmail: {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
+            },
+            policyCheckbox: {
+                required: "Обязательно согласие",
             }
         },
         submitHandler: function(form) {
@@ -152,8 +164,8 @@ $(document).ready(function () {
                 url: "send.php",
                 data: $(form).serialize(),
                 success: function (response) {
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                     $(form)[0].reset();
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                 }
             });
           }
@@ -175,6 +187,9 @@ $(document).ready(function () {
           userEmail: {
             required: true,
             email: true
+          },
+          policyCheckbox: {
+            required: true,
           }
         }, 
         messages: {
@@ -190,6 +205,9 @@ $(document).ready(function () {
             userEmail: {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
+            },
+            policyCheckbox: {
+                required: "Обязательно согласие",
             }
         },
         submitHandler: function(form) {
@@ -198,8 +216,8 @@ $(document).ready(function () {
                 url: "send.php",
                 data: $(form).serialize(),
                 success: function (response) {
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                     $(form)[0].reset();
+                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
                 }
             });
           }
