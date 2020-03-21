@@ -55,7 +55,6 @@ $(document).ready(function () {
 
     bullets.css('left', prev.width() + 15);
     next.css('left', prev.width() + bullets.width() + 20);
-    console.log(next);
 
     var next1 = $('.swiper-button-next__first');
     var prev1 = $('.swiper-button-prev__first');
@@ -76,7 +75,10 @@ $(document).ready(function () {
               minlength: 2,
               maxlength: 15
           },
-          userPhone: "required",
+          userPhone: {
+              required: true,
+              minlength: 18,
+          },
           userEmail: {
             required: true,
             email: true
@@ -88,7 +90,80 @@ $(document).ready(function () {
                 minlength: "Имя не короче двух букв",
                 maxlength: "Имя не длиннее 15 букв"
             },
-            userPhone: "Телефон обязателен",
+            userPhone: {
+                required: "Телефон обязателен",
+                minlength: "Минимум 10 цифр",
+            },
+            userEmail: {
+              required: "Обязательно укажите email",
+              email: "Введите в формате name@domain.com"
+            }
+        }
+      });
+
+      $(".footer__form").validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15
+          },
+          userPhone: {
+              required: true,
+              minlength: 18,
+          },
+          userEmail: {
+            required: true,
+            email: true
+          }
+        }, 
+        messages: {
+            userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче двух букв",
+                maxlength: "Имя не длиннее 15 букв"
+            },
+            userPhone: {
+                required: "Телефон обязателен",
+                minlength: "Минимум 10 цифр",
+            },
+            userEmail: {
+              required: "Обязательно укажите email",
+              email: "Введите в формате name@domain.com"
+            }
+        }
+      });
+
+      $(".control__form").validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15
+          },
+          userPhone: {
+              required: true,
+              minlength: 18,
+          },
+          userEmail: {
+            required: true,
+            email: true
+          }
+        }, 
+        messages: {
+            userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче двух букв",
+                maxlength: "Имя не длиннее 15 букв"
+            },
+            userPhone: {
+                required: "Телефон обязателен",
+                minlength: "Минимум 10 цифр",
+            },
             userEmail: {
               required: "Обязательно укажите email",
               email: "Введите в формате name@domain.com"
