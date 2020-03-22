@@ -598,6 +598,11 @@ template {
   width: 50%;
   margin-bottom: 1.43rem; }
 
+.col-35 {
+  margin-left: 5rem;
+  flex-basis: 30%;
+  position: relative; }
+
 .control__section-title {
   margin-bottom: 2.214rem;
   margin-top: -30rem; }
