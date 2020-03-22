@@ -419,6 +419,9 @@ template {
 .phone {
   color: #E3B873; }
 
+.contacts__button:hover {
+  background-color: rgba(227, 184, 115, 0.3); }
+
 .contacts__phone {
   margin-right: 3.2rem; }
 
@@ -462,6 +465,8 @@ template {
   .hero__button {
     margin-right: 20px;
     padding: 20px 35px; }
+    .hero__button:hover {
+      background-color: rgba(227, 184, 115, 0.3); }
   .hero__instagram {
     position: absolute;
     left: 0;
