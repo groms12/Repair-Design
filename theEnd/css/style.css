@@ -3,14 +3,14 @@
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; }
+  font-display: wrap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; }
+  font-display: wrap; }
 
 .button {
   padding: 11px 24px;
@@ -431,7 +431,7 @@ template {
   flex-direction: column;
   justify-content: center;
   padding-top: 100px;
-  background: black url("../img/background/hero-bg.webp") no-repeat center/cover;
+  background: black url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
   .hero::before {
@@ -618,7 +618,7 @@ template {
   display: flex;
   margin: auto;
   min-height: 31rem;
-  background: black url("../img/background/video-mask.webp") center no-repeat;
+  background: black url("../img/video-mask.jpg") center no-repeat;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   margin-bottom: 4.428rem; }
   .control__video::before {
@@ -919,7 +919,7 @@ template {
   line-height: 180%; }
 
 .footer {
-  background: url("../img/background/footer-bg.webp") center no-repeat;
+  background: url("../img/footer-bg.jpg") center no-repeat;
   padding-top: 3rem; }
   .footer__wrap {
     background-color: #181818;
@@ -1064,8 +1064,8 @@ img {
     left: 0;
     padding: 1rem 3rem; }
   .our-team__card {
-    max-width: 16.4rem;
-    left: 1rem; } }
+    max-width: 16.2rem;
+    margin-left: auto; } }
 
 @media screen and (max-width: 760px) {
   .section-title__word {
