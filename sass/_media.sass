@@ -14,13 +14,15 @@
             padding-bottom: 0
     .our-team
         background-color: $dark
+        position: relative
         &__text
             display: none
         &__button
             left: 0
-            padding: 1rem 3.1rem
+            padding: 1rem 3rem
         &__card
-            max-width: 16.3rem
+            max-width: 16.2rem
+            margin-left: auto
 
 @media screen and ( max-width: 992px )
     .our-clients
@@ -35,7 +37,13 @@
             display: none
         &__content
             margin-left: 0
-
+    .our-team
+        &__button
+            left: 0
+            padding: 1rem 3rem
+        &__card
+            max-width: 16.2rem
+            margin-left: auto
 
 @media screen and ( max-width: 760px )
     .section
@@ -94,6 +102,13 @@
                 content: '...'
         &__pricetag
             padding: 1rem 4rem 1rem 3rem
+    .our-team
+        &__button
+            left: 0
+            padding: 1rem 3rem
+        &__card
+            max-width: 16.2rem
+            margin-left: auto
 
 @media screen and ( max-width: 570px )
     .contacts
@@ -117,6 +132,13 @@
             display: block
             min-width: 22.86rem
             margin-bottom: 1.85rem
+    .our-team
+        &__button
+            left: 0
+            padding: 1rem 3rem
+        &__card
+            max-width: 16.2rem
+            margin-left: auto
 
 @media screen and ( max-height: 520px )
     .hero
