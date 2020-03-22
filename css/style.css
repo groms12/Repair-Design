@@ -1030,14 +1030,22 @@ img {
     padding: 1rem 2rem 1rem 1rem; }
   .our-clients__button {
     padding-top: 0;
-    padding-bottom: 0; } }
-
-@media screen and (max-width: 992px) {
-  .our-clients {
-    display: none; }
+    padding-bottom: 0; }
   .our-team {
     background-color: black; }
     .our-team__text {
+      display: none; }
+    .our-team__button {
+      left: 0;
+      padding: 1rem 3.1rem; }
+    .our-team__card {
+      max-width: 16.3rem; } }
+
+@media screen and (max-width: 992px) {
+  .our-clients {
+    display: none;
+    background-color: black; }
+    .our-clients__text {
       display: none; }
   .nav {
     display: none; }
