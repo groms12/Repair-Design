@@ -573,6 +573,8 @@ template {
   font-weight: 100; }
   .card__pricetag-1 {
     padding: 1.2rem 5rem 1.2rem 2rem; }
+  .card__pricetag-2 {
+    padding: 1rem 4rem; }
 
 .card__item {
   font-size: 1.29rem;
@@ -589,7 +591,8 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 30%; }
+  flex-basis: 30%;
+  position: relative; }
 
 .col-50 {
   width: 50%;
@@ -780,7 +783,7 @@ template {
   font-family: 'Yeseva One', cursive; }
 
 .section__purpose {
-  padding-bottom: 30rem; }
+  padding-bottom: 40rem; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
@@ -814,7 +817,7 @@ template {
     margin: auto; }
 
 .our-team {
-  margin-top: -30rem;
+  margin-top: -38rem;
   color: #fff; }
   .our-team__text {
     text-align: center;
@@ -838,18 +841,29 @@ template {
       margin-top: 3rem; }
   .our-team__subtitle {
     max-width: 32rem;
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 10rem; }
   .our-team__card {
-    margin: auto;
     color: black;
     text-align: center;
     margin-top: -7rem;
     margin-bottom: 5rem;
-    max-width: 16.64rem; }
+    max-width: 17rem;
+    left: -0.714rem; }
   .our-team__button {
     font-size: 0.928rem;
-    padding: 1rem 2.8rem;
-    left: 0.3rem; }
+    padding: 1rem 3rem;
+    left: 0.5rem; }
+  .our-team__icon {
+    outline: none;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: #E3B873;
+    border: none;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
 .our-clients__text {
   text-align: center;
@@ -869,8 +883,30 @@ template {
 .our-clients__card {
   margin-top: 3.57rem; }
 
+.our-clients__stick {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.our-clients__button {
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem; }
+
+.our-clients__title, .our-clients__span {
+  margin-left: 1rem;
+  margin-top: 1.5rem; }
+
 .client-img {
   border-radius: 50%; }
+
+.card__item {
+  font-family: 'Futura Book', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 180%; }
 
 .footer {
   background: url("../img/footer-bg.jpg") center no-repeat;
@@ -986,9 +1022,18 @@ img {
   html {
     font-size: 12px; }
   .card__pricetag {
-    padding: 1rem 2rem 1rem 1rem; } }
+    padding: 1rem 2rem 1rem 1rem; }
+  .our-clients__button {
+    padding-top: 0;
+    padding-bottom: 0; } }
 
 @media screen and (max-width: 992px) {
+  .our-clients {
+    display: none; }
+  .our-team {
+    background-color: black; }
+    .our-team__text {
+      display: none; }
   .nav {
     display: none; }
   .hero__instagram {
