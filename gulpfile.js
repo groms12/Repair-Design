@@ -4,7 +4,11 @@ const rename =  require('gulp-rename');
 const cssmin =  require('gulp-cssmin');
 const sass = require('gulp-sass');
 const autoprefixer =  require('gulp-autoprefixer' );
- 
+const cleanCSS = require('gulp-clean-css');
+const minify=  require('gulp-minify');
+const  htmlmin  =  require ('gulp-htmlmin');
+
+
 // function defalt() {
 //     return src('./css/*.css')
 //         .pipe(cssmin())
@@ -35,4 +39,40 @@ function serveSass() {
         .pipe(browserSync.stream());
 };
 
+function buildCSS(done){
+    src('css/**/**.css').pipe(cleanCSS({compatibility: "ie8"})).pipe((dest('dist1/css')));
+    done();
+}
+
+function buildJS(done) {
+    src(['js/**.js', '!js/**.min.js'])
+        .pipe(minify({ext:{
+            min:'.js'
+        }
+    }))
+    .pipe(dest('dist1/js/'));
+    src('js/**.min.js').pipe(dest('dist1/js/'));
+    done();
+}
+
+function html(done){
+    src('**.html').pipe(htmlmin({collapseWhitespace: true})).pipe(dest('dist1/'));
+    done();
+}
+
+function fonts(done){
+    src('fonts/**/**').pipe(dest('dist1/fonts/'));
+    done();
+}
+
+function php(done) {
+    src(['**.php']).pipe(dest('dist1/'));
+    src('phpMailer/**/**').pipe(dest('dist1/phpMailer/'));
+}
+
 exports.serve = bs;
+exports.buildCSS = buildCSS;
+exports.buildJS = buildJS;
+exports.html = html;
+exports.fonts = fonts;
+exports.php = php;
