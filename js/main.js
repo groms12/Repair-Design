@@ -39,6 +39,8 @@ $(document).ready(function () {
 
     var mySwiper = new Swiper ('.swiper-container-s1', {
         loop: true,
+        preloadImages: false,
+        lazy: true,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -58,9 +60,12 @@ $(document).ready(function () {
 
     var mySwiper1 = new Swiper ('.swiper-container-s2', {
         loop: true,
+        preloadImages: false,
+        lazy: true,
         pagination: {
             el: '.swiper-pagination1',
             type: 'bullets',
+            clickable: true,
         },
         navigation: {
           nextEl: '.swiper-button-next1',
@@ -69,8 +74,12 @@ $(document).ready(function () {
     });
     
     var bullets1 = $('.swiper-pagination1');
-
     bullets1.css('left', prev1.width() + 15);
+
+    $('.swiper-slide__href').on('click',  '.slids', function() {
+        const index = $(this).data('index');
+        mySwiper1.slideToLoop(index, false);
+     });
 
     new WOW().init();
 
