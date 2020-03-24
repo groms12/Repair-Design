@@ -464,7 +464,8 @@ template {
     margin-bottom: 3rem; }
   .hero__button {
     margin-right: 20px;
-    padding: 20px 35px; }
+    padding: 20px 35px;
+    outline: none; }
     .hero__button:hover {
       background-color: rgba(227, 184, 115, 0.3); }
   .hero__instagram {
@@ -673,12 +674,16 @@ template {
   flex-basis: 30%; }
 
 .control__button {
-  padding: 1.286rem 4.7857rem; }
+  padding: 1.286rem 4.7857rem;
+  outline: none; }
 
 .video__play {
   position: relative;
   margin: auto;
   cursor: pointer; }
+
+.contacts__button {
+  outline: none; }
 
 .modal {
   opacity: 0;
@@ -733,7 +738,8 @@ template {
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    outline: none; }
 
 .projects__container {
   margin-bottom: 28rem; }
@@ -958,7 +964,8 @@ template {
     margin-bottom: 3.6rem; }
   .footer__button {
     margin: auto;
-    padding: 1.285rem 4.7857rem; }
+    padding: 1.285rem 4.7857rem;
+    outline: none; }
   .footer__menu {
     background-color: black;
     padding-top: 4.2857rem; }
