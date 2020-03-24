@@ -10,7 +10,7 @@ $(document).ready(function () {
         modal.toggleClass('modal--visible');
     });
 
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', (e) => {
         if (e.keyCode === 27) {
             modal.toggleClass('modal--visible');
         } 
@@ -86,10 +86,10 @@ $(document).ready(function () {
     var bullets1 = $('.swiper-pagination1');
     bullets1.css('left', prev1.width() + 15);
 
-    // $('.swiper-slide__text').on('click',  '.slids', function() {
-    //     var index = $(this).data('index');
-    //     mySwiper1.slideToLoop(index, false);
-    //  });
+    $('.swiper-slide__text').on('click',  '.slids', function() {
+        const index = $(this).data('index');
+        mySwiper1.slideToLoop(index, false);
+     });
 
     new WOW().init();
 
@@ -250,6 +250,8 @@ $(document).ready(function () {
             });
           }
       });
+
+    //   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
     $('[type=tel]').mask('+7 (000) 000-00-00');
 

@@ -68,6 +68,7 @@ function fonts(done){
 function php(done) {
     src(['**.php']).pipe(dest('dist1/'));
     src('phpMailer/**/**').pipe(dest('dist1/phpMailer/'));
+    done();
 }
 
 exports.serve = bs;
