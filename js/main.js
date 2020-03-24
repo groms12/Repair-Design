@@ -22,6 +22,15 @@ $(document).ready(function () {
         }
     });
 
+    $(document).ready(function(){
+        $(".menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    });
+
     $(document).scroll(function(){  //функция прокрутки страницы наверх
         if($(document).scrollTop() > 70) {
             $('.scroll-top').show();
@@ -62,6 +71,7 @@ $(document).ready(function () {
         loop: true,
         preloadImages: false,
         lazy: true,
+        slideToClickedSlide: true,
         pagination: {
             el: '.swiper-pagination1',
             type: 'bullets',
@@ -76,7 +86,7 @@ $(document).ready(function () {
     var bullets1 = $('.swiper-pagination1');
     bullets1.css('left', prev1.width() + 15);
 
-    $('.swiper-slide__href').on('click',  '.slids', function() {
+    $('.swiper-slide__text').on('click',  '.slids', function() {
         const index = $(this).data('index');
         mySwiper1.slideToLoop(index, false);
      });

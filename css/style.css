@@ -816,7 +816,7 @@ template {
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
 
-.section__purpose {
+.container__purpose {
   padding-bottom: 40rem; }
 
 .bullets {
@@ -829,6 +829,10 @@ template {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -1px; }
+
+.swiper-pagination-bullet {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem; }
 
 .scroll-top {
   cursor: pointer;
@@ -1104,6 +1108,8 @@ img {
     display: block; }
     .section-title__word::after {
       display: none; }
+  .section__purpose {
+    display: none; }
   .control {
     background-color: black;
     color: #fff; }
