@@ -13,6 +13,7 @@
     </script>
 </head>
 <body>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61230730, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61230730" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <header class="header">
         <div class="container">
             <div class="menu">
@@ -27,7 +28,7 @@
                 </nav>
                 <div class="contacts menu__contacts">
                     <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-                    <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+                    <button onclick="ym(92342863, 'reachGoal', 'button'); return true;" class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
                 </div>                
             </div>
         </div>
@@ -108,7 +109,8 @@
                         <img src="img/video.svg" alt="Ремонт">
                     </div>
                 </div>
-                <div class="control__video video">
+                <div class="control__video video" id="player">
+                    <script src="https://www.youtube.com/iframe_api"></script>
                     <img src="img/play.svg" alt="play icon" class="play video__play">
                 </div>
                 <div class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</div>
@@ -403,19 +405,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-prev swiper-button-prev__second"></div>
-                        <div class="swiper-pagination swiper-pagination__second"></div>
-                        <div class="swiper-button-next swiper-button-next__second"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
                         
                         <div class="swiper-container wow fadeIn" data-wow-delay="0.8s">
                             <div class="swiper-wrapper swiper-no-swiping">
                                 <!-- Slides -->
                                 <div class="swiper-slide"><img src="img/slider/img01.webp" alt=""></div>
-                                <div class="swiper-slide"><img src="img/slider/img02.webp" class="lazyload" alt=""></div>
-                                <div class="swiper-slide"><img src="img/slider/img03.webp" class="lazyload" alt=""></div>
-                                <div class="swiper-slide"><img src="img/slider/img04.webp" class="lazyload" alt=""></div>
-                                <div class="swiper-slide"><img src="img/slider/img05.webp" class="lazyload" alt=""></div>
-                                <div class="swiper-slide"><img src="img/slider/img06.webp" class="lazyload" alt=""></div>
+                                <div class="swiper-slide"><img src="img/slider/img02.webp" alt=""></div>
+                                <div class="swiper-slide"><img src="img/slider/img03.webp" alt=""></div>
+                                <div class="swiper-slide"><img src="img/slider/img04.webp" alt=""></div>
+                                <div class="swiper-slide"><img src="img/slider/img05.webp" alt=""></div>
+                                <div class="swiper-slide"><img src="img/slider/img06.webp" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -653,7 +655,6 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="lazysizes.min.js" async></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script> 
     <script src="js/main.js"></script>

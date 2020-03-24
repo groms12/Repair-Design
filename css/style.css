@@ -677,7 +677,8 @@ template {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .modal {
   opacity: 0;
