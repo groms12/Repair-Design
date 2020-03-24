@@ -37,7 +37,7 @@ $(document).ready(function () {
         return false;
     });
 
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.swiper-container-s1', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -55,6 +55,22 @@ $(document).ready(function () {
 
     bullets.css('left', prev.width() + 15);
     next.css('left', prev.width() + bullets.width() + 20); 
+
+    var mySwiper1 = new Swiper ('.swiper-container-s2', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination1',
+            type: 'bullets',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next1',
+          prevEl: '.swiper-button-prev1',
+        },
+    });
+    
+    var bullets1 = $('.swiper-pagination1');
+
+    bullets1.css('left', prev1.width() + 15);
 
     new WOW().init();
 
@@ -105,7 +121,7 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    alert("Форма отправлена, мы свяжемся с вами в ближайшее время");
                     modal.removeClass('modal--visible');
                 }
             });
@@ -158,7 +174,7 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    alert("Форма отправлена, мы свяжемся с вами в ближайшее время");
                 }
             });
           }
@@ -210,13 +226,15 @@ $(document).ready(function () {
                 data: $(form).serialize(),
                 success: function (response) {
                     $(form)[0].reset();
-                    alert("Ajhvf отправлена, мы свяжемся с вами в ближайшее время");
+                    alert("Форма отправлена, мы свяжемся с вами в ближайшее время");
                 }
             });
           }
       });
 
-      $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    //   $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+    $('[type=tel]').mask('+7 (000) 000-00-00');
 
       // подключение видео с ютуб
       var player;

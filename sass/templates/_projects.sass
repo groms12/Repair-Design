@@ -31,13 +31,14 @@
                 background-color: $primary
                 left: 0
                 bottom: 0
-    &-pagination
+    &-pagination, &-pagination1
         &-bullet
             background-color: rgba($light, 0.5)
             &-active
                 background-color: $light
     &-button 
-        &-prev, &-next
+        outline: none
+        &-prev, &-next, &-prev1, &-next1
             bottom: 0
             top: auto
             background-size: 42px
@@ -45,11 +46,17 @@
             height: 14px
             &::after
                 display: none
-        &-prev 
+        &-prev, &-prev1
+            outline: none
             margin-left: 0
             background: url('../img/left.svg') no-repeat center 
-        &-next
+        &-next, &-next1
+            outline: none
             background: url('../img/right.svg') no-repeat center 
+        &-prev1 
+            margin-right: 1rem
+        &-next1 
+            margin-left: 1rem
 .section
     &-title
         &__subtitle, &__part
@@ -57,9 +64,14 @@
             font-family: 'Yeseva One', cursive
     &__purpose
         padding-bottom: 40rem
+.bullets
+    display: flex
+.slids
+    text-decoration: none
+    color: $light
 
 .swiper-container-horizontal>.swiper-pagination-bullets
     width: auto
-    bottom: -1px         
+    bottom: -1px    
 
         
