@@ -3,6 +3,8 @@ $(document).ready(function () {
     var modalBtn = $('[data-toggle=modal]');
     var closeBtn = $('.modal__close');
 
+    new WOW().init();
+
     modalBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     });
@@ -90,8 +92,6 @@ $(document).ready(function () {
     //     var index = $(this).data('index');
     //     mySwiper1.slideToLoop(index, false);
     //  });
-
-    new WOW().init();
 
     // валидация формы
     $(".modal__form").validate({

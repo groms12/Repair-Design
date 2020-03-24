@@ -8,14 +8,6 @@ const cleanCSS = require('gulp-clean-css');
 const minify=  require('gulp-minify');
 const  htmlmin  =  require ('gulp-htmlmin');
 
-
-// function defalt() {
-//     return src('./css/*.css')
-//         .pipe(cssmin())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(dest('dist'));
-// };
-
 function bs() {
     serveSass();
     browserSync.init({
