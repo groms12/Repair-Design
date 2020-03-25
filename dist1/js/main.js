@@ -3,6 +3,8 @@ $(document).ready(function () {
     var modalBtn = $('[data-toggle=modal]');
     var closeBtn = $('.modal__close');
 
+    new WOW().init();
+
     modalBtn.on('click', function () {
         modal.toggleClass('modal--visible');
     });
@@ -83,18 +85,16 @@ $(document).ready(function () {
         },
     });
     
-    var bullets1 = $('.swiper-pagination1');
-    bullets1.css('left', prev1.width() + 15);
+    // var bullets1 = $('.swiper-pagination1');
+    // bullets1.css('left', prev1.width() + 15);
 
     // $('.swiper-slide__text').on('click',  '.slids', function() {
     //     var index = $(this).data('index');
     //     mySwiper1.slideToLoop(index, false);
     //  });
 
-    new WOW().init();
-
     // валидация формы
-    $(".modal__form").validate({
+    $('.modal__form').validate({
         errorClass: "invalid",
         errorElement: "div",
         rules: {

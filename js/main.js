@@ -24,8 +24,16 @@ $(document).ready(function () {
         }
     });
 
+    // якорные ссылки в меню плавная прокрутка
     $(document).ready(function(){
         $(".menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    // плавная прокрутка кнопки листайте вниз
+        $(".hero__scroll-down").on("click", function (event) {
             event.preventDefault();
             var id  = $(this).attr('href'),
                 top = $(id).offset().top;
@@ -41,13 +49,16 @@ $(document).ready(function () {
         }
     });
     
+    // плавная прокрутка кнопки наверх
     $('.scroll-top').click(function(){
         $('html').animate({scrollTop: 0}, 1000);
         $('body').animate({scrollTop: 0}, 1000);
-        console.log($('body').scrollTop);
+        // console.log($('body').scrollTop);
         return false;
     });
 
+
+    // создание слайдеров
     var mySwiper = new Swiper ('.swiper-container-s1', {
         loop: true,
         preloadImages: false,
@@ -67,7 +78,7 @@ $(document).ready(function () {
     var bullets = $('.swiper-pagination');
 
     bullets.css('left', prev.width() + 15);
-    next.css('left', prev.width() + bullets.width() + 20); 
+    next.css('left', prev.width() + bullets.width() + 20); // воздух между элементами навигации
 
     var mySwiper1 = new Swiper ('.swiper-container-s2', {
         loop: true,
@@ -84,15 +95,23 @@ $(document).ready(function () {
           prevEl: '.swiper-button-prev1',
         },
     });
+
+    $('#btn1').click(function(){
+        mySwiper1.slideToLoop(0, 1000, false);
+    })
+    $('#btn2').click(function(){
+        mySwiper1.slideToLoop(1, 1000, false);
+    })
+    $('#btn3').click(function(){
+        mySwiper1.slideToLoop(2, 1000, false);
+    })
+    $('#btn4').click(function(){
+        mySwiper1.slideToLoop(3, 1000, false);
+    })
+    $('#btn5').click(function(){
+        mySwiper1.slideToLoop(4, 1000, false);
+    })
     
-    // var bullets1 = $('.swiper-pagination1');
-    // bullets1.css('left', prev1.width() + 15);
-
-    // $('.swiper-slide__text').on('click',  '.slids', function() {
-    //     var index = $(this).data('index');
-    //     mySwiper1.slideToLoop(index, false);
-    //  });
-
     // валидация формы
     $('.modal__form').validate({
         errorClass: "invalid",

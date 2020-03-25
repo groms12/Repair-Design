@@ -92,6 +92,11 @@ div.invalid {
 input.invalid {
   border-bottom: 1px solid red; }
 
+.swiper-slide__text {
+  color: rgba(255, 255, 255, 0.6); }
+  .swiper-slide__text--active {
+    color: #fff; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -824,7 +829,9 @@ template {
 
 .slids {
   text-decoration: none;
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.6); }
+  .slids--active {
+    color: #fff; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
