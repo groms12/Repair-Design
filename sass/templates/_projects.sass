@@ -5,12 +5,17 @@
     &-slide
         display: flex
         flex-wrap: wrap
+        &__menu
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
         &__text
             flex-basis: 50%
             margin-bottom: 0.8rem
             padding-bottom: 2rem
             &__purpose
                 flex-basis: 30%
+                list-style-type: none
         &__heading, &__number
             font-family: 'Yeseva One', cursive
             font-size: 1.285rem
@@ -62,6 +67,9 @@
         &__subtitle, &__part
             text-transform: uppercase
             font-family: 'Yeseva One', cursive
+        &__part
+            &--nonactive
+                display: none
 .container
     &__purpose
         padding-bottom: 40rem

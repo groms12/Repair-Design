@@ -763,12 +763,17 @@ template {
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
+  .swiper-slide__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .swiper-slide__text {
     flex-basis: 50%;
     margin-bottom: 0.8rem;
     padding-bottom: 2rem; }
     .swiper-slide__text__purpose {
-      flex-basis: 30%; }
+      flex-basis: 30%;
+      list-style-type: none; }
   .swiper-slide__heading, .swiper-slide__number {
     font-family: 'Yeseva One', cursive;
     font-size: 1.285rem;
@@ -820,6 +825,9 @@ template {
 .section-title__subtitle, .section-title__part {
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
+
+.section-title__part--nonactive {
+  display: none; }
 
 .container__purpose {
   padding-bottom: 40rem; }

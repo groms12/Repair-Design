@@ -96,22 +96,171 @@ $(document).ready(function () {
         },
     });
 
-    $('#btn1').click(function(){
-        mySwiper1.slideToLoop(0, 1000, false);
-    })
-    $('#btn2').click(function(){
-        mySwiper1.slideToLoop(1, 1000, false);
-    })
-    $('#btn3').click(function(){
-        mySwiper1.slideToLoop(2, 1000, false);
-    })
-    $('#btn4').click(function(){
-        mySwiper1.slideToLoop(3, 1000, false);
-    })
-    $('#btn5').click(function(){
-        mySwiper1.slideToLoop(4, 1000, false);
-    })
-    
+    // 6 шагов перелистывание
+    $('.slide-1').click(function(e) {
+            e.preventDefault();
+            $(".menu-swiper .active").removeClass('active');
+            $(this).addClass('active');
+            mySwiper1.slideTo( '1', 1000,false );
+    });
+
+    $('.slide-2').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '2',1000,false );
+    });
+
+    $('.slide-3').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '3',1000,false );
+    });
+
+    $('.slide-4').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '4',1000,false );
+    });
+
+    $('.slide-5').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '5',1000,false );
+    });
+
+    $('.slide-6').click(function(e) {
+        e.preventDefault();
+        $(".swiper-slide__href .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '6',1000,false );
+    });
+
+    // активная ссылка
+    $('.slide-1').on('click', function () {
+        $('.section-title__part1').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-1').addClass('swiper-slide__text--active');
+        $('#btn1').addClass('slids--active');
+    });
+    $('.slide-2').on('click', function () {
+        $('.section-title__part2').removeClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-2').addClass('swiper-slide__text--active');
+        $('#btn2').addClass('slids--active');
+    });
+    $('.slide-3').on('click', function () {
+        $('.section-title__part3').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-3').addClass('swiper-slide__text--active');
+        $('#btn3').addClass('slids--active');
+    });
+    $('.slide-4').on('click', function () {
+        $('.section-title__part4').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-4').addClass('swiper-slide__text--active');
+        $('#btn4').addClass('slids--active');
+    });
+    $('.slide-5').on('click', function () {
+        $('.section-title__part5').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-5').addClass('swiper-slide__text--active');
+        $('#btn5').addClass('slids--active');
+    });
+    $('.slide-6').on('click', function () {
+        $('.section-title__part6').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').addClass('swiper-slide__text--active');
+        $('#btn6').addClass('slids--active');
+    });
+
     // валидация формы
     $('.modal__form').validate({
         errorClass: "invalid",
