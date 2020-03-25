@@ -24,8 +24,16 @@ $(document).ready(function () {
         }
     });
 
+    // якорные ссылки в меню плавная прокрутка
     $(document).ready(function(){
         $(".menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    // плавная прокрутка кнопки листайте вниз
+        $(".hero__scroll-down").on("click", function (event) {
             event.preventDefault();
             var id  = $(this).attr('href'),
                 top = $(id).offset().top;
@@ -41,13 +49,16 @@ $(document).ready(function () {
         }
     });
     
+    // плавная прокрутка кнопки наверх
     $('.scroll-top').click(function(){
         $('html').animate({scrollTop: 0}, 1000);
         $('body').animate({scrollTop: 0}, 1000);
-        console.log($('body').scrollTop);
+        // console.log($('body').scrollTop);
         return false;
     });
 
+
+    // создание слайдеров
     var mySwiper = new Swiper ('.swiper-container-s1', {
         loop: true,
         preloadImages: false,
@@ -67,7 +78,7 @@ $(document).ready(function () {
     var bullets = $('.swiper-pagination');
 
     bullets.css('left', prev.width() + 15);
-    next.css('left', prev.width() + bullets.width() + 20); 
+    next.css('left', prev.width() + bullets.width() + 20); // воздух между элементами навигации
 
     var mySwiper1 = new Swiper ('.swiper-container-s2', {
         loop: true,
@@ -84,14 +95,320 @@ $(document).ready(function () {
           prevEl: '.swiper-button-prev1',
         },
     });
-    
-    // var bullets1 = $('.swiper-pagination1');
-    // bullets1.css('left', prev1.width() + 15);
 
-    // $('.swiper-slide__text').on('click',  '.slids', function() {
-    //     var index = $(this).data('index');
-    //     mySwiper1.slideToLoop(index, false);
-    //  });
+    // 6 шагов перелистывание
+    $('.slide-1').click(function(e) {
+            e.preventDefault();
+            $(".menu-swiper .active").removeClass('active');
+            $(this).addClass('active');
+            mySwiper1.slideTo( '1', 1000,false );
+            $('.section-title__part1').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-1').addClass('swiper-slide__text--active');
+            $('#btn1').addClass('slids--active');
+    });
+
+    $('.slide-2').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '2',1000,false );
+        $('.section-title__part2').removeClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-2').addClass('swiper-slide__text--active');
+        $('#btn2').addClass('slids--active');
+    });
+
+    $('.slide-3').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '3',1000,false );
+        $('.section-title__part3').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-3').addClass('swiper-slide__text--active');
+        $('#btn3').addClass('slids--active');
+    });
+
+    $('.slide-4').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '4',1000,false );
+        $('.section-title__part4').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-4').addClass('swiper-slide__text--active');
+        $('#btn4').addClass('slids--active');
+    });
+
+    $('.slide-5').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '5',1000,false );
+        $('.section-title__part5').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.section-title__part6').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-6').removeClass('swiper-slide__text--active');
+        $('#btn6').removeClass('slids--active');
+        $('.slide-5').addClass('swiper-slide__text--active');
+        $('#btn5').addClass('slids--active');
+    });
+
+    $('.slide-6').click(function(e) {
+        e.preventDefault();
+        $(".menu-swiper .active").removeClass('active');
+        $(this).addClass('active');
+        mySwiper1.slideTo( '6',1000,false );
+        $('.section-title__part6').removeClass('section-title__part--nonactive');
+        $('.section-title__part2').addClass('section-title__part--nonactive');
+        $('.section-title__part3').addClass('section-title__part--nonactive');
+        $('.section-title__part4').addClass('section-title__part--nonactive');
+        $('.section-title__part5').addClass('section-title__part--nonactive');
+        $('.section-title__part1').addClass('section-title__part--nonactive');
+        $('.slide-1').removeClass('swiper-slide__text--active');
+        $('#btn1').removeClass('slids--active');
+        $('.slide-2').removeClass('swiper-slide__text--active');
+        $('#btn2').removeClass('slids--active');
+        $('.slide-3').removeClass('swiper-slide__text--active');
+        $('#btn3').removeClass('slids--active');
+        $('.slide-4').removeClass('swiper-slide__text--active');
+        $('#btn4').removeClass('slids--active');
+        $('.slide-5').removeClass('swiper-slide__text--active');
+        $('#btn5').removeClass('slids--active');
+        $('.slide-6').addClass('swiper-slide__text--active');
+        $('#btn6').addClass('slids--active');
+    });
+
+    mySwiper1.on('slideChange', function () {
+        if(this.activeIndex === 0) {  
+            $('.section-title__part6').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').addClass('swiper-slide__text--active');
+            $('#btn6').addClass('slids--active');       
+        };
+        if(this.activeIndex === 1) {  
+            $('.section-title__part1').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-1').addClass('swiper-slide__text--active');
+            $('#btn1').addClass('slids--active');         
+        };
+        if(this.activeIndex === 2) {            
+            $('.section-title__part2').removeClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-2').addClass('swiper-slide__text--active');
+            $('#btn2').addClass('slids--active');
+        };
+        if(this.activeIndex === 3) {   
+            $('.section-title__part3').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-3').addClass('swiper-slide__text--active');
+            $('#btn3').addClass('slids--active');         
+        };
+        if(this.activeIndex === 4) { 
+            $('.section-title__part4').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-4').addClass('swiper-slide__text--active');
+            $('#btn4').addClass('slids--active');           
+        };
+        if(this.activeIndex === 5) {  
+            $('.section-title__part5').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-5').addClass('swiper-slide__text--active');
+            $('#btn5').addClass('slids--active');          
+        };
+        if(this.activeIndex === 6) { 
+            $('.section-title__part6').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part1').addClass('section-title__part--nonactive');
+            $('.slide-1').removeClass('swiper-slide__text--active');
+            $('#btn1').removeClass('slids--active');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').addClass('swiper-slide__text--active');
+            $('#btn6').addClass('slids--active');           
+        };
+        if(this.activeIndex === 7) {  
+            $('.section-title__part1').removeClass('section-title__part--nonactive');
+            $('.section-title__part2').addClass('section-title__part--nonactive');
+            $('.section-title__part3').addClass('section-title__part--nonactive');
+            $('.section-title__part4').addClass('section-title__part--nonactive');
+            $('.section-title__part5').addClass('section-title__part--nonactive');
+            $('.section-title__part6').addClass('section-title__part--nonactive');
+            $('.slide-2').removeClass('swiper-slide__text--active');
+            $('#btn2').removeClass('slids--active');
+            $('.slide-3').removeClass('swiper-slide__text--active');
+            $('#btn3').removeClass('slids--active');
+            $('.slide-4').removeClass('swiper-slide__text--active');
+            $('#btn4').removeClass('slids--active');
+            $('.slide-5').removeClass('swiper-slide__text--active');
+            $('#btn5').removeClass('slids--active');
+            $('.slide-6').removeClass('swiper-slide__text--active');
+            $('#btn6').removeClass('slids--active');
+            $('.slide-1').addClass('swiper-slide__text--active');
+            $('#btn1').addClass('slids--active');         
+        };
+    });
 
     // валидация формы
     $('.modal__form').validate({
