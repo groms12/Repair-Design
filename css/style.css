@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
@@ -420,7 +421,8 @@ template {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-size: 1.075rem; }
+  font-size: 1.075rem;
+  text-decoration: none; }
 
 .nav__item {
   text-decoration: none;
@@ -438,7 +440,8 @@ template {
   background-color: rgba(227, 184, 115, 0.3); }
 
 .contacts__phone {
-  margin-right: 3.2rem; }
+  margin-right: 3.2rem;
+  text-decoration: underline; }
 
 .hero {
   position: relative;
@@ -503,7 +506,8 @@ template {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 0.8rem; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -533,6 +537,8 @@ template {
       height: 1px;
       background-color: #E3B873;
       margin-left: 8px; }
+    .instagram__link:hover {
+      color: rgba(227, 184, 115, 0.8); }
 
 .title {
   margin: 0;
@@ -684,14 +690,18 @@ template {
 .control__input-group {
   display: flex;
   flex-direction: column;
-  flex-basis: 30%; }
+  flex-basis: 30%;
+  margin-right: 1.5rem; }
 
 .control__input {
   color: black; }
 
 .control__button {
-  padding: 1.286rem 4.7857rem;
+  margin: auto;
+  padding: 1.285rem 4.7857rem;
   outline: none; }
+  .control__button:hover {
+    background-color: rgba(227, 184, 115, 0.7); }
 
 .video__play {
   position: relative;
@@ -700,6 +710,10 @@ template {
 
 .contacts__button {
   outline: none; }
+
+.section-title__heading {
+  font-weight: 100;
+  font-size: 1.4rem; }
 
 .modal {
   opacity: 0;
@@ -748,9 +762,9 @@ template {
   .modal__input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 3.428rem; }
-  .modal__input:last-of-type {
-    margin-bottom: 1rem; }
+    margin-bottom: 3rem; }
+    .modal__input-group__last {
+      margin-bottom: 0.8rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -763,6 +777,8 @@ template {
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
+  .swiper-slide__value {
+    color: rgba(255, 255, 255, 0.8); }
   .swiper-slide__menu {
     display: flex;
     flex-wrap: wrap;
@@ -796,7 +812,8 @@ template {
       bottom: 0; }
 
 .swiper-pagination-bullet, .swiper-pagination1-bullet {
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none; }
   .swiper-pagination-bullet-active, .swiper-pagination1-bullet-active {
     background-color: #fff; }
 
@@ -810,6 +827,8 @@ template {
     height: 14px; }
     .swiper-button-prev::after, .swiper-button-next::after, .swiper-button-prev1::after, .swiper-button-next1::after {
       display: none; }
+    .swiper-button-prev:hover, .swiper-button-next:hover, .swiper-button-prev1:hover, .swiper-button-next1:hover {
+      cursor: pointer; }
   .swiper-button-prev, .swiper-button-prev1 {
     outline: none;
     margin-left: 0;
@@ -824,10 +843,27 @@ template {
 
 .section-title__subtitle, .section-title__part {
   text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
+  font-family: 'Yeseva One', cursive;
+  font-size: 1rem; }
 
 .section-title__part--nonactive {
   display: none; }
+
+.section-title__heading {
+  font-size: 1.8rem;
+  margin-bottom: 7rem; }
+
+.section-title__title {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem; }
+
+.section-title__text-2 {
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.7rem;
+  max-width: 30rem; }
 
 .container__purpose {
   padding-bottom: 40rem; }
@@ -875,6 +911,74 @@ template {
     left: 0;
     right: 0;
     margin: auto; }
+
+.ymap-container {
+  position: relative;
+  margin: 3rem 0 2rem 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/yandex-before-load-marker.webp") #ffffff no-repeat;
+  width: 80%;
+  margin: auto;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 6rem;
+  margin-top: 6rem; }
+
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  margin: auto;
+  width: 100%;
+  height: 30rem;
+  cursor: pointer;
+  background-color: transparent; }
+
+/*Индикатор загрузки, который показывается до загрузки карты*/
+.loader {
+  color: #000;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  transition: opacity .7s ease;
+  opacity: 0; }
+
+.loader.is-active {
+  top: 0;
+  opacity: 1; }
+
+.loader-default:after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; }
+
+@-webkit-keyframes rotation {
+  from {
+    transform:rotate(0) { } }
+  to {
+    transform:rotate(359deg) { } } }
+
+@keyframes rotation {
+  from {
+    transform:rotate(0) { } }
+  to {
+    transform:rotate(359deg) { } } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 
 .our-team {
   margin-top: -38rem;
@@ -925,6 +1029,16 @@ template {
     border: none;
     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
+.card__title {
+  font-size: 1.3rem; }
+
+.card__item-2 {
+  font-size: 1.3rem;
+  color: #959595; }
+
+.our-clients__subtitle {
+  font-size: 1.4rem; }
+
 .our-clients__text {
   text-align: center;
   font-style: normal;
@@ -944,19 +1058,27 @@ template {
   margin-top: 3.57rem; }
 
 .our-clients__stick {
-  margin-left: 1rem;
-  margin-right: 1rem; }
+  margin-left: 1.5rem;
+  margin-right: 1.5rem; }
 
 .our-clients__button {
   padding-bottom: 0;
   padding-top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-right: 2rem; }
 
-.our-clients__title, .our-clients__span {
+.our-clients__left, .our-clients__right {
+  display: flex;
+  align-items: center; }
+
+.our-clients__title {
   margin-left: 1rem;
   margin-top: 1.5rem; }
+
+.our-clients__span {
+  margin-left: 1rem; }
 
 .client-img {
   border-radius: 50%; }
@@ -967,6 +1089,11 @@ template {
   font-weight: normal;
   font-size: 15px;
   line-height: 180%; }
+
+.section-title__heading {
+  font-weight: 100;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem; }
 
 .footer {
   background: url("../img/background/footer-bg.webp") center no-repeat;
@@ -1012,11 +1139,6 @@ template {
   .footer__menu {
     background-color: black;
     padding-top: 4.2857rem; }
-  .footer__map {
-    max-width: 66.07rem;
-    margin: auto;
-    margin-bottom: 4.5rem;
-    min-height: 455px; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -1087,6 +1209,11 @@ img {
   .our-clients__button {
     padding-top: 0;
     padding-bottom: 0; }
+  .our-clients__stick {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+  .our-clients__card {
+    width: 21rem; }
   .our-team {
     background-color: black;
     position: relative; }

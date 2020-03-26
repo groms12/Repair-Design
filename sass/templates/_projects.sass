@@ -5,6 +5,8 @@
     &-slide
         display: flex
         flex-wrap: wrap
+        &__value
+            color: rgba($light, 0.8)
         &__menu
             display: flex
             flex-wrap: wrap
@@ -39,6 +41,7 @@
     &-pagination, &-pagination1
         &-bullet
             background-color: rgba($light, 0.5)
+            outline: none
             &-active
                 background-color: $light
     &-button 
@@ -51,6 +54,8 @@
             height: 14px
             &::after
                 display: none
+            &:hover
+                cursor: pointer
         &-prev, &-prev1
             outline: none
             margin-left: 0
@@ -67,9 +72,23 @@
         &__subtitle, &__part
             text-transform: uppercase
             font-family: 'Yeseva One', cursive
+            font-size: 1rem
         &__part
             &--nonactive
                 display: none
+        &__heading
+            font-size: 1.8rem
+            margin-bottom: 7rem
+        &__title
+            font-size: 1rem
+            font-weight: normal  
+            line-height: 1.5rem
+        &__text-2
+            margin-bottom: 4rem
+            font-size: 1.1rem
+            color: $light
+            line-height: 1.7rem
+            max-width: 30rem
 .container
     &__purpose
         padding-bottom: 40rem
