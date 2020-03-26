@@ -570,7 +570,8 @@ template {
 .card__text {
   position: relative;
   max-width: 23.6rem;
-  margin: 0 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
   margin-top: -9.3rem;
   padding: 1.79rem 2.14rem;
   background-color: #ffffff;
@@ -714,8 +715,6 @@ template {
   margin: auto;
   padding: 1.285rem 4.7857rem;
   outline: none; }
-  .control__button:hover {
-    background-color: rgba(227, 184, 115, 0.7); }
 
 .video__play {
   position: relative;
@@ -786,7 +785,8 @@ template {
     outline: none; }
 
 .projects__container {
-  margin-bottom: 28rem; }
+  margin-bottom: 28rem;
+  padding-top: 5rem; }
 
 .swiper-slide {
   display: flex;
@@ -903,21 +903,23 @@ template {
   cursor: pointer;
   position: fixed;
   bottom: 3.57rem;
-  right: 5.14rem;
+  right: 1rem;
   width: 3.57rem;
   height: 3.57rem;
   border-radius: 50%;
-  border: 2px solid black;
-  background-color: #E3B873;
+  border: 2px solid #E3B873;
+  background-color: transperent;
   z-index: 1000;
   outline: none;
   display: none; }
+  .scroll-top:hover {
+    background-color: rgba(227, 184, 115, 0.7); }
   .scroll-top::after {
     content: '';
     width: 0.714rem;
     height: 0.714rem;
-    border-top: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 2px solid #E3B873;
+    border-left: 2px solid #E3B873;
     transform: rotate(45deg);
     position: absolute;
     top: 0.286rem;
@@ -1050,6 +1052,10 @@ template {
   font-size: 1.3rem;
   color: #959595; }
 
+.our-clients__item {
+  margin-bottom: 3rem;
+  margin-left: -1rem; }
+
 .our-clients__subtitle {
   font-size: 1.4rem; }
 
@@ -1095,7 +1101,8 @@ template {
   margin-left: 1rem; }
 
 .client-img {
-  border-radius: 50%; }
+  border-radius: 50%;
+  height: 5.5rem; }
 
 .card__item {
   font-family: 'Futura Book', sans-serif;
@@ -1103,6 +1110,9 @@ template {
   font-weight: normal;
   font-size: 15px;
   line-height: 180%; }
+
+.card__text {
+  max-width: 27rem; }
 
 .section-title__heading {
   font-weight: 100;
@@ -1153,6 +1163,26 @@ template {
   .footer__menu {
     background-color: black;
     padding-top: 4.2857rem; }
+  .footer__media {
+    display: none; }
+    .footer__media__text {
+      max-width: 32rem;
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 138.6%;
+      color: #E3B873;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 2rem; }
+    .footer__media__icons {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .footer__media__icon {
+      margin-right: 1rem; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -1260,6 +1290,29 @@ img {
     left: 1rem; } }
 
 @media screen and (max-width: 760px) {
+  .types__design {
+    padding-bottom: 40rem; }
+  .control__label {
+    color: rgba(255, 255, 255, 0.7); }
+  .input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
+    .input--dark::-webkit-input-placeholder {
+      color: #fff;
+      font-size: 1.3rem; }
+    .input--dark::-moz-placeholder {
+      color: #fff;
+      font-size: 1.3rem; }
+    .input--dark:-ms-input-placeholder {
+      color: #fff;
+      font-size: 1.3rem; }
+    .input--dark::-ms-input-placeholder {
+      color: #fff;
+      font-size: 1.3rem; }
+    .input--dark::placeholder {
+      color: #fff;
+      font-size: 1.3rem; }
+  .col-50 {
+    width: 80%; }
   .section-title__word {
     display: block; }
     .section-title__word::after {
@@ -1299,8 +1352,6 @@ img {
   .row {
     flex-direction: column;
     align-items: center; }
-  .col-50 {
-    width: 65%; }
   .types__card {
     margin-bottom: 5rem; }
   .types__design {
@@ -1308,7 +1359,8 @@ img {
     color: #fff; }
   .card__text {
     margin-left: 0;
-    color: black; }
+    color: black;
+    left: -1.5rem; }
   .card__subtitle {
     color: #fff; }
   .card__item-end ~ li {
@@ -1322,7 +1374,9 @@ img {
     padding: 1rem 3rem; }
   .our-team__card {
     max-width: 16.2rem;
-    margin-left: auto; } }
+    margin-left: auto; }
+  .our-team__subtitle {
+    margin-bottom: 5rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__button {
@@ -1351,7 +1405,14 @@ img {
     padding: 1rem 3rem; }
   .our-team__card {
     max-width: 16.2rem;
-    margin-left: auto; } }
+    margin-left: auto; }
+  .footer__menu {
+    display: none; }
+  .footer__media {
+    display: block;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: black; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {

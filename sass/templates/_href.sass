@@ -2,21 +2,23 @@
 	cursor: pointer
 	position: fixed
 	bottom: 3.57rem
-	right: 5.14rem
+	right: 1rem
 	width: 3.57rem
 	height: 3.57rem
 	border-radius: 50%
-	border: 2px solid $dark
-	background-color: $primary
+	border: 2px solid $primary
+	background-color: transperent
 	z-index: 1000
 	outline: none
 	display: none
+	&:hover
+		background-color: rgba($primary, 0.7)
 	&::after
 		content: ''
 		width: 0.714rem
 		height: 0.714rem
-		border-top: 2px solid $dark
-		border-left: 2px solid $dark
+		border-top: 2px solid $primary
+		border-left: 2px solid $primary
 		transform: rotate(45deg)
 		position: absolute
 		top: 0.286rem

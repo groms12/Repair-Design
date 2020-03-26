@@ -32,7 +32,9 @@ function serveSass() {
 };
 
 function buildCSS(done){
-    src('css/**/**.css').pipe(cleanCSS({compatibility: "ie8"})).pipe((dest('dist1/css')));
+    src('css/**/**.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe((dest('dist1/css')));
     done();
 }
 
